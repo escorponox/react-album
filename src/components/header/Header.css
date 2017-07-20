@@ -1,0 +1,15 @@
+.Header {
+  background-color: #4686E6;
+  box-shadow: 0 2px 2px #1e6adb;
+  padding: 16px;
+  text-align: center;
+  color: #fff;
+}
+
+.Header__heading {
+  margin-bottom: 0;
+}
+
+.Header__heading a:visited {
+  color: #fff;
+}

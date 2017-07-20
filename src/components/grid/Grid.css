@@ -1,0 +1,40 @@
+.Grid {
+  padding: 24px;
+}
+
+.Grid__title {
+  text-align: center;
+}
+
+.Grid__album-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  width: 216px;
+}
+
+@media only screen and (min-width: 480px) {
+  .Grid__album-container {
+    width: 432px;
+  }
+}
+
+@media only screen and (min-width: 696px) {
+  .Grid__album-container {
+    width: 648px;
+  }
+}
+
+@media only screen and (min-width: 912px) {
+  .Grid__album-container {
+    width: 864px;
+  }
+}
+
+@media only screen and (min-width: 1128px) {
+  .Grid__album-container {
+    width: 1080px;
+  }
+}

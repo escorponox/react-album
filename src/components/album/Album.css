@@ -1,0 +1,34 @@
+.Album {
+  background: rgba(255, 255, 255, .95);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.Album__box {
+  border: none;
+  border-radius: 0;
+  left: 0;
+  padding: 2em;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 100vw;
+}
+
+.Album__box-title {
+  color: #4686E6;
+  font-size: 1.5em;
+}
+
+@media only screen and (min-width: 700px) {
+  .Album__box-title {
+    font-size: 2em;
+  }
+}
