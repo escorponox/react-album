@@ -3,7 +3,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import type { RouterHistory } from 'react-router-dom';
+import type { RouterHistory } from 'react-router-dom'
 import Spinner from '../spinner/Spinner'
 import PhotoGrid from '../grid/PhotoGrid'
 import './Album.css'
@@ -17,13 +17,6 @@ class Album extends React.Component {
     albumId: number,
     album: AlbumType,
     history: RouterHistory
-  }
-
-  backToAlbums (event: SyntheticEvent) {
-    if(event.keyCode === 27) {
-      event.preventDefault()
-      this.props.history.push('/')
-    }
   }
 
   render() {

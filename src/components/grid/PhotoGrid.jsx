@@ -26,7 +26,7 @@ class PhotoGrid extends React.Component {
   render() {
     return this.props.photos
       ? <div className="Grid">
-          <div className="Grid__album-container">
+          <div className="Grid__photo-container">
             {this.props.photos.map(photo =>
               <PhotoCard key={photo.id} photoId={photo.id} albumId={this.props.albumId} />
             )}

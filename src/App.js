@@ -9,10 +9,10 @@ import Header from './components/header/Header'
 import Intro from './components/intro/Intro'
 import AlbumGrid from './components/grid/AlbumGrid'
 import Album from './components/album/Album'
+import AlbumSlider from './components/album/AlbumSlider'
 import './transitions.css'
 
 class App extends React.Component {
-
   render() {
     return (
       <Provider store={store}>
@@ -22,7 +22,7 @@ class App extends React.Component {
           <Route path="/" component={() => <AlbumGrid pageSize={10} />} />
           <Route
             path="/:albumId(\d+)?"
-            render={props => (
+            render={props =>
               <CSSTransition
                 appear
                 timeout={300}
@@ -31,9 +31,25 @@ class App extends React.Component {
                 mountOnEnter
                 unmountOnExit
               >
-                <Album albumId={parseInt(props.match.params.albumId, 10)}/>
-              </CSSTransition>
-            )}
+                <Album albumId={parseInt(props.match.params.albumId, 10)} />
+              </CSSTransition>}
+          />
+          <Route
+            path="/:albumId(\d+)/:photoId?"
+            render={props =>
+              <CSSTransition
+                appear
+                timeout={300}
+                in={!!props.match.params.photoId}
+                classNames="fade-scale"
+                mountOnEnter
+                unmountOnExit
+              >
+                <AlbumSlider
+                  albumId={parseInt(props.match.params.albumId, 10)}
+                  photoId={parseInt(props.match.params.photoId, 10)}
+                />
+              </CSSTransition>}
           />
         </div>
       </Provider>

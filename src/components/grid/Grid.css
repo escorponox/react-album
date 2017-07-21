@@ -38,3 +38,9 @@
     width: 1080px;
   }
 }
+
+.Grid__photo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

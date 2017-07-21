@@ -20,9 +20,11 @@ const Intro = () =>
     </a>,{' '}
     <a target="_blank" rel="noopener noreferrer" href="https://flow.org/">
       Flow
-    </a>,
+    </a>{' '}
+    and{' '}
     <a target="_blank" rel="noopener noreferrer" href="http://redux.js.org/">
       Redux
-    </a>
+    </a>. The purpose of this app is to play with that tech stack, please don't
+    bother if it is not perfectly responsive.
   </p>
 export default Intro
